@@ -12,7 +12,6 @@ phases:
   build:
     commands:
       - echo "Starting build `date` in `pwd`"
-      - aws cloudformation package --template-file app-sam.yaml --s3-bucket $BUILD_OUTPUT_BUCKET --output-template-file app-output_sam.yaml
       - aws cloudformation package --template-file test-sam.yaml --s3-bucket $BUILD_OUTPUT_BUCKET --output-template-file test-output_sam.yaml
   post_build:
     commands:
@@ -20,6 +19,5 @@ phases:
 
 artifacts:
   files:
-    - app-output_sam.yaml
     - test-output_sam.yaml
   discard-paths: yes
