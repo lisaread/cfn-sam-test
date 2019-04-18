@@ -38,4 +38,4 @@ Outputs:
     Description: Check the param
     Value: !Ref Test2
     Export:
-      Name: CheckingNEXT_VAL    
+      Name: CheckingNEXTVAL    
