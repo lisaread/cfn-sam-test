@@ -13,6 +13,7 @@ phases:
     commands:
       - echo "Starting build `date` in `pwd`"
       - aws cloudformation package --template-file test-sam.yaml --s3-bucket $BUILD_OUTPUT_BUCKET --output-template-file test-output_sam.yaml
+      - echo "{"test-key" : "test-value"}" > key.json
   post_build:
     commands:
       - echo "build completed on `date`"
@@ -20,4 +21,5 @@ phases:
 artifacts:
   files:
     - test-output_sam.yaml
+    - key.json
   discard-paths: yes
