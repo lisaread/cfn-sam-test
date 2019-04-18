@@ -1,5 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
+Parameters:
+  Test:
+    Type: String
+    Default: Default
 
 Resources:
   TestFunction:
@@ -22,3 +26,9 @@ Outputs:
     Value: !Ref TestFunction
     Export:
       Name: TestFunction
+  Test: 
+    Description: Check the param
+    Value: !Ref Test
+    Export:
+      Name: Checking123
+    
