@@ -4,6 +4,9 @@ Parameters:
   Test:
     Type: String
     Default: Default
+   Test2:
+    Type: String
+    Default: Default
 
 Resources:
   TestFunction:
@@ -31,4 +34,8 @@ Outputs:
     Value: !Ref Test
     Export:
       Name: Checking123
-    
+  Test2: 
+    Description: Check the param
+    Value: !Ref Test2
+    Export:
+      Name: CheckingNEXT_VAL    
