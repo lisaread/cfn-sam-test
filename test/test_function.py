@@ -6,6 +6,8 @@ import random
 ###update file to trigger pipeline - update some more stuff and things###
 ## update 4 yasssss##
 
+## update with latest version pointing to alias ##
+
 cp = boto3.client("codepipeline")
 cf = boto3.client("cloudformation")
 
