@@ -22,6 +22,7 @@ Resources:
               - 'logs:*'
             Effect: Allow
             Resource: '*'
+      AutoPublishAlias: shiftit
       DeploymentPreference:
         Enabled: true
         Type: CodeDeployDefault.LambdaAllAtOnce
