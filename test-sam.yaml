@@ -22,6 +22,9 @@ Resources:
               - 'logs:*'
             Effect: Allow
             Resource: '*'
+        DeploymentPreference:
+          Enabled: true
+          Type: CodeDeployDefault.LambdaAllAtOnce
 
 Outputs:
   TestFunction:
